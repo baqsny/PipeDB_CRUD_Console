@@ -75,6 +75,8 @@ namespace PipeDB_CRUD_Console
             Console.WriteLine("Input pipe ID to update: ");
             var userPipeId = checkPipeUserInput.CheckUserInputInt();
 
+            pipeIds = databaseManager.ReadPipesIdsFromDatabase();
+            
             if (pipeIds.Contains(userPipeId.ToString()))
             {
                 Console.WriteLine("Input NEW pipe name: ");
